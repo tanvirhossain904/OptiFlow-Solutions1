@@ -87,14 +87,14 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-24 bg-gray-50 dark:bg-[#0F2318]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="section-label">Our Values</span>
             <h2 className="text-3xl md:text-4xl font-black text-[#131313] dark:text-white">
               Principles That <em className="italic font-serif text-[#81fa00]  ">Guide Us</em>
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {values.map((v, i) => (
               <motion.div
                 key={i}
@@ -103,12 +103,12 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-[#f2f2f2] dark:bg-[#0c2501] rounded-2xl p-6 border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all"
+                className="bg-[#f2f2f2] dark:bg-[#0c2501] rounded-2xl p-2 md:p-6 border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#81fa00]/70 /10 border border-[#81fA00]/20 flex items-center justify-center mb-5">
+                <div className="w-12 h-12 rounded-xl bg-[#81fa00]/70 /10 border border-[#81fA00]/20 flex items-center justify-center mb-3 md:mb-5">
                   <v.icon size={22} className="text-[#81fa00]  " />
                 </div>
-                <h3 className="font-bold text-sm md:text-base text-[#131313] dark:text-white mb-3">{v.title}</h3>
+                <h3 className="font-bold text-sm md:text-base text-[#131313] dark:text-white mb-1 md:mb-3">{v.title}</h3>
                 <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}

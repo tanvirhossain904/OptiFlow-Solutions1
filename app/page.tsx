@@ -172,8 +172,14 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.slice(0, 3).map((service, i) => (
+              <ServiceCard key={service.id} service={service} index={i} />
+            ))}
+          </div>
+
+          <div className="grid md:hidden grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6">
+            {services.slice(0, 2).map((service, i) => (
               <ServiceCard key={service.id} service={service} index={i} />
             ))}
           </div>
@@ -188,8 +194,8 @@ export default function HomePage() {
 
       {/* ─── WHY CHOOSE US ─── */}
       <section className="py-24 bg-gray-50 dark:bg-[#0F2318]/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-14">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="mb-8 md:mb-14">
             <span className="section-label">Why Choose Us</span>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#131313] dark:text-white leading-tight">
               We <em className="italic font-serif">Design</em> for the <em className="text-[#81fa00]  font-serif italic">Future</em> to
@@ -198,7 +204,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
             {whyUs.map((item, i) => (
               <motion.div
                 key={i}
@@ -207,13 +213,13 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-[#f2f2f2] dark:bg-[#0c2501]/20 rounded-2xl p-6 border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#81fa00]/70 /5"
+                className="bg-[#f2f2f2] dark:bg-[#0c2501]/20 rounded-2xl p-3 md:p-6 border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#81fa00]/70 "
               >
              <div className="w-12 h-12 rounded-xl bg-[#0c2701] border border-[#0c2701]/50 flex items-center justify-center mb-5">
                 {React.cloneElement(item.icon, { className: "text-[#81fa00]  w-6 h-6" })}
               </div>
-                <h3 className="font-bold text-[#131313] dark:text-white text-base mb-3">{item.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-[#131313] dark:text-white text-sm md:text-base mb-2 md:mb-3">{item.title}</h3>
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -235,17 +241,24 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="md:grid hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.slice(0, 3).map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
             ))}
           </div>
+
+          <div className="grid md:hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {projects.slice(0, 2).map((project, i) => (
+              <ProjectCard key={project.id} project={project} index={i} />
+            ))}
+          </div>
+
         </div>
       </section>
 
       {/* ─── TESTIMONIALS ─── */}
       <section className="py-24 bg-[#0c2501]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-14">
             <span className="section-label">Client Stories</span>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
@@ -255,7 +268,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -266,18 +279,18 @@ export default function HomePage() {
                 whileHover={{ y: -5 }}
                 className="bg-[#0F2318] rounded-2xl overflow-hidden border border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all duration-300"
               >
-                <div className={`h-40 ${t.color} relative`}>
+                <div className={`md:h-40 h-32 ${t.color} relative`}>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-black/20 border-2 border-white/30" />
+                    <div className="md:w-16 w-12 h-12 md:h-16 rounded-full bg-black/20 border-2 border-white/30" />
                   </div>
                 </div>
-                <div className="p-5">
-                  <div className="flex gap-0.5 mb-3">
+                <div className="md:p-5 p-3">
+                  <div className="flex gap-0.5 mb-2 md:mb-3">
                     {[...Array(5)].map((_, j) => (
                       <Star key={j} size={12} className="text-[#81fa00] fill-[#81fa00]" />
                     ))}
                   </div>
-                  <p className="text-gray-400 text-sm md:text-sm leading-relaxed mb-4 line-clamp-3">{t.text}</p>
+                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-2 md:mb-4 line-clamp-3">{t.text}</p>
                   <div>
                     <span className="text-xs text-gray-600 block mb-0.5">Logo</span>
                     <p className="font-bold text-white text-xs md:text-sm">{t.name}</p>
@@ -310,8 +323,8 @@ export default function HomePage() {
 
       {/* ─── FAQ ─── */}
       <section className="py-24 bg-[#f2f2f2] dark:bg-[#0c2501]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+        <div className="max-w-5xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 md:mb-14">
             <span className="section-label">Queries</span>
             <h2 className="text-3xl lg:text-4xl font-black text-[#131313] dark:text-white">
               <em className="italic font-serif">Questions</em> You
@@ -320,7 +333,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 md:gap-4">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -328,11 +341,11 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-[#0F2318] border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all group"
+                className="flex  items-start gap-3 p-2 md:p-4 rounded-xl bg-gray-50 dark:bg-[#0F2318] border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all group"
               >
                 <CheckCircle size={16} className="text-[#81fa00]  mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm font-semibold text-[#131313] dark:text-white mb-1">{faq.q}</p>
+                  <p className="text-xs md:text-sm font-semibold text-[#131313] dark:text-white mb-2">{faq.q}</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{faq.a}</p>
                 </div>
               </motion.div>

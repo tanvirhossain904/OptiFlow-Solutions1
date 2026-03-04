@@ -50,14 +50,14 @@ export default function ServicesPage() {
 
       {/* Process */}
       <section className="py-24 bg-gray-50 dark:bg-[#0F2318]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-16">
             <span className="section-label">How We Work</span>
             <h2 className="text-3xl md:text-4xl font-black text-[#131313] dark:text-white">
               Our <em className="italic font-serif text-[#81fa00]  ">Process</em>
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {process.map((step, i) => (
               <motion.div
                 key={i}
@@ -65,15 +65,15 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="relative bg-[#f2f2f2] dark:bg-[#0c2501] rounded-2xl p-6 border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all group"
+                className="relative bg-[#f2f2f2] dark:bg-[#0c2501] rounded-2xl p-3 md:p-6 border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all group"
               >
-                <span className="text-3xl md:text-5xl font-black text-[#81fa00]  /15 group-hover:text-[#81fa00]  /25 transition-colors absolute top-4 right-4">
+                <span className="text-2xl md:text-5xl font-black text-[#81fa00] group-hover:text-[#81fa00]  /25 transition-colors absolute top-4 right-4">
                   {step.step}
                 </span>
-                <div className="w-10 h-10 rounded-xl bg-[#81fa00]/70 /10 border border-[#81fA00]/20 flex items-center justify-center text-[#81fa00]   font-black text-sm mb-5">
+                <div className="w-10 h-10 rounded-xl bg-[#81fa00]/70 border border-[#81fA00]/20 flex items-center justify-center text-[#81fa00]   font-black text-sm mb-5">
                   {step.step}
                 </div>
-                <h3 className="font-bold text-base text-[#131313] dark:text-white mb-3">{step.title}</h3>
+                <h3 className="font-bold text-base text-[#131313] dark:text-white mb-1 md:mb-3">{step.title}</h3>
                 <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}

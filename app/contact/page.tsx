@@ -35,7 +35,7 @@ export default function ContactPage() {
 
       {/* Contact section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Info panel */}
             <div className="lg:col-span-2">
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#0F2318] rounded-2xl p-8 border border-[#81fA00]/15"
+                className="bg-[#0F2318] rounded-2xl p-4 md:p-8 border border-[#81fA00]/15"
               >
                 <h2 className="md:text-xl text-md font-bold text-white mb-2">Start Your Project</h2>
                 <p className="text-gray-500 text-xs md:text-sm mb-7">Fill out the form below and we'll prepare a custom proposal for you.</p>
