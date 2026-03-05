@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Sun, Moon } from 'lucide-react'
+import { Menu, X,} from 'lucide-react'
 import logo from '@/public/logos/white_logo.png'
 
 // Products Dropdown Data
@@ -47,27 +47,38 @@ export default function Header() {
   }, [])
 
   // Dark mode
-  useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    if (
-      saved === 'dark' ||
-      (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-      setDark(true)
-    }
-  }, [])
+  // useEffect(() => {
+  //   const saved = localStorage.getItem('theme')
+  //   if (
+  //     saved === 'dark' ||
+  //     (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  //   ) {
+  //     document.documentElement.classList.add('dark')
+  //     setDark(true)
+  //   }
+  // }, [])
 
-  const toggleDark = () => {
-    if (dark) {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-    } else {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    }
-    setDark(!dark)
-  }
+    useEffect(() => {
+      const saved = localStorage.getItem('theme')
+      if (saved === 'light') {
+        document.documentElement.classList.remove('dark')
+        setDark(false)
+      } else {
+        document.documentElement.classList.add('dark')
+        setDark(true)
+      }
+    }, [])
+
+  // const toggleDark = () => {
+  //   if (dark) {
+  //     document.documentElement.classList.remove('dark')
+  //     localStorage.setItem('theme', 'light')
+  //   } else {
+  //     document.documentElement.classList.add('dark')
+  //     localStorage.setItem('theme', 'dark')
+  //   }
+  //   setDark(!dark)
+  // }
 
   // Smooth scroll for same-page anchors
   const handleAnchorClick = (href: string) => {
