@@ -65,7 +65,7 @@ const leaders = [
   },
 ];
 
-const CYCLE_MS = 3000;
+const CYCLE_MS = 4000;
 
 export default function HomeOwner() {
   const [activeIdx, setActiveIdx] = useState(0);

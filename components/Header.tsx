@@ -180,7 +180,7 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-[#81fa00] hover:bg-[#81fa00]/50 text-black font-semibold text-sm rounded-full transition-all duration-200 shadow-lg shadow-[#81fa00]/70"
+              className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-[#81fa00] hover:bg-[#81fa00]/50 text-black font-semibold text-sm rounded-full transition-all duration-200 shadow-lg "
             >
               Get a Quote
             </Link>

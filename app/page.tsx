@@ -99,7 +99,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-[#f2f2f2] dark:bg-[#0c2501]/20 rounded-2xl p-3 md:p-6 border border-gray-200 dark:border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#81fa00]/70 "
+             className="rounded-2xl p-3 md:p-6 border border-[#81fa00]/10 hover:border-[#81fa00]/70 transition-all duration-500"
               >
              <div className="w-12 h-12 rounded-xl bg-[#0c2701] border border-[#0c2701]/50 flex items-center justify-center mb-5">
                 {React.cloneElement(item.icon, { className: "text-[#81fa00]  w-6 h-6" })}
@@ -192,7 +192,7 @@ export default function HomePage() {
           </h2>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#81fa00] hover:bg-[#81fa00]/80 text-black font-bold rounded-full transition-all duration-200 text-sm md:text-base shadow-xl shadow-[#81fa00]/30"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#81fa00] hover:bg-[#81fa00]/80 text-black font-bold rounded-full transition-all duration-200 text-sm md:text-base shadow-xl "
           >
             Start Your Project <ArrowRight size={18} />
           </Link>

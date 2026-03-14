@@ -68,7 +68,7 @@ function LogoRow({
             key={i}
             className="group min-w-[80px] md:min-w-[120px] mx-3 flex items-center justify-center p-2 md:p-3 rounded-xl transition-all duration-300 hover:scale-105"
             style={{
-              background: "rgba(94,76,220,0.04)",
+              background: "rgba(94,76,220,0.09)",
               border: "1px solid var(--border-color)",
             }}
           >
