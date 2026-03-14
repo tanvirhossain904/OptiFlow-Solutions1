@@ -240,7 +240,7 @@ export default function ProductsSection() {
                   transition={{ duration: 0.4, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] as [number,number,number,number] }}
                   whileHover={{ y: -4 }}
                   onClick={() => setSelected(product)}
-                  className="group relative bg-[#0d2b00] rounded-2xl border border-[#81fa00]/50 hover:border-[#81fa00] cursor-pointer transition-all duration-300 overflow-hidden flex flex-col"
+                  className="group relative bg-[#0d2702] rounded-2xl border border-[#81fa00]/30 hover:border-[#81fa00]/70 cursor-pointer transition-all duration-300 overflow-hidden flex flex-col"
                 >
                   {/* Top accent line */}
                   <div
