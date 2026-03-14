@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowUpRight, Calendar, User } from 'lucide-react'
-import type { Project } from '@/data/projects'
+import type { Project } from '@/data/products'
 
 interface ProjectCardProps {
   project: Project

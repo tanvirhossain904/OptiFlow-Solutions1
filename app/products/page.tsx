@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ProjectCard from '@/components/ProjectCard'
-import { projects } from '@/data/projects'
+import { projects } from '@/data/products'
 
 const categories = ['All', 'FinTech', 'E-Commerce', 'Healthcare', 'EdTech', 'Logistics', 'Real Estate']
 

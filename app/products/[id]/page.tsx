@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { projects } from '@/data/projects'
+import { projects } from '@/data/products'
 import { ArrowLeft, ExternalLink, Github, CheckCircle, Calendar, User, Clock, Tag } from 'lucide-react'
 
 interface Props {

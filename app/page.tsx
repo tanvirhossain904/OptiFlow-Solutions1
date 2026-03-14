@@ -3,82 +3,78 @@ import React from 'react';
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, Star, Infinity as InfinityIcon, Headphones, DollarSign, Clock } from 'lucide-react'
-
+import { ArrowRight, CheckCircle, Star } from 'lucide-react' 
+import { faqs, stats, testimonials, whyUs } from '@/data/homedata'
 import ProjectCard from '@/components/ProjectCard'
 import ServiceCard from '@/components/ServiceCard'
-import { projects } from '@/data/projects'
 import { services } from '@/data/services'
+import HomeWorldMap from '@/components/home/HomeWorldMap';
+import HomeVideoTestimonial from '@/components/home/HomeVideoTestimonial';
+import HomeOwner from '@/components/home/HomeOwner';
 
-const stats = [
-  { value: '150+', label: 'Projects Delivered' },
-  { value: '98%', label: 'Client Satisfaction' },
-  { value: '50+', label: 'Expert Team' },
-  { value: '8+', label: 'Years Experience' },
-]
+import HomeHero from '@/components/home/HomeHero';
+import HomeDeployTeam from '@/components/home/HomeDeployTeam';
+import HomeHero2 from '@/components/home/HomeHero2';
+import HomeBrand from '@/components/home/Homebrand';
+import ProductsSection from '@/components/home/HomeProduct';
 
-const whyUs = [
-  {
-    icon: <InfinityIcon  size={28} className="text-[#81fa00] " />,
-    title: 'Unlimited Revisions',
-    desc: 'We are committed to your success with unlimited revisions at every step. Our mission is to make your software vision come to life exactly as you imagine.',
-  },
-  {
-    icon: <Headphones size={28} className="text-[#81fa00] " />,
-    title: 'Lifetime Technical Support',
-    desc: 'With lifetime support, your business is never alone. We\'re here for you at every technical hurdle with necessary guidance wherever you need.',
-  },
-  {
-    icon: <DollarSign size={28} className="text-[#81fa00] " />,
-    title: 'Scalable Licensing Plans',
-    desc: 'Our easy payment options are completely flexible. So you can start it and keep scaling up as your product grows without breaking the bank.',
-  },
-  {
-    icon: <Clock size={28} className="text-[#81fa00] " />,
-    title: '24/7 Technical Support',
-    desc: 'Round-the-clock assistance that is carefully designed to tackle critical app issues that is designed to tackle even the most demanding needs.',
-  },
-]
-
-const testimonials = [
-  {
-    name: 'Sarah Chen',
-    role: 'CTO, Fint Inc.',
-    text: 'EasySoft transformed our vision into a world-class fintech product. Their technical expertise and commitment to quality is unmatched.',
-    color: 'bg-blue-400',
-  },
-  {
-    name: 'Marcus Webb',
-    role: 'Founder, ShopEase',
-    text: 'The team delivered beyond our expectations. Our e-commerce platform handles 10x more traffic with zero downtime.',
-    color: 'bg-[#81fa00] ',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'CEO, MediCorp',
-    text: 'Working with EasySoft was seamless from day one. They understood our HIPAA requirements and executed flawlessly.',
-    color: 'bg-orange-400',
-  },
-  {
-    name: 'Alex Morgan',
-    role: 'Product Lead, EduLearn',
-    text: 'Our LMS went from concept to 15k users in 3 months. The quality of work and attention to detail is exceptional.',
-    color: 'bg-purple-400',
-  },
-]
-
-const faqs = [
-  { q: 'What are your core services?', a: 'We offer IT consulting, custom software development, cloud & DevOps, UI/UX design, AI/ML, and cybersecurity solutions.' },
-  { q: 'How does the revision process work?', a: 'We offer unlimited revisions during the development phase to ensure the final product matches your vision exactly.' },
-  { q: 'What are your core services?', a: 'We work with startups, SMBs, and enterprise clients across fintech, healthcare, e-commerce, and more.' },
-  { q: 'What is the typical project timeline?', a: 'Most projects range from 4–12 weeks depending on scope. We provide detailed timelines during the discovery phase.' },
-  { q: 'How do your payment plans work?', a: 'We offer flexible milestone-based payments, monthly retainers, and project-based pricing to suit your budget.' },
-  { q: 'Do you provide team training?', a: 'Yes, we provide comprehensive handover documentation, training sessions, and ongoing support for your team.' },
-]
 
 export default function HomePage() {
   return (
     <div className="bg-[#f2f2f2] dark:bg-[#0c2501]">
+
+      <HomeHero2/>
+
+      <HomeHero/>
+
+
+      <HomeBrand/>
+
+
+      {/* ─── WHAT WE DO ─── */}
+      <section className="py-24 bg-[#f2f2f2] dark:bg-[#0c2501]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-14">
+            <span className="section-label">What We Do</span>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#131313] dark:text-white leading-tight">
+              We Design <em className="italic dark:text-[#81fa00] text-[#81fa00]/50">Software .</em>
+              <br />
+              That speaks to <em className="italic font-serif">Audiences</em>
+            </h2>
+          </div>
+
+          <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.slice(0, 3).map((service, i) => (
+              <ServiceCard key={service.id} service={service} index={i} />
+            ))}
+          </div>
+
+          <div className="grid md:hidden grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6">
+            {services.slice(0, 2).map((service, i) => (
+              <ServiceCard key={service.id} service={service} index={i} />
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link href="/services" className="btn-outline">
+              See All Services <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <HomeVideoTestimonial/>
+
+
+      <HomeOwner/>
+
+      <HomeDeployTeam/>
+
+
+      <HomeWorldMap/>
+
+
+      
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0c2501] pt-16">
         {/* Background grid */}
@@ -160,37 +156,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── WHAT WE DO ─── */}
-      <section className="py-24 bg-[#f2f2f2] dark:bg-[#0c2501]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-14">
-            <span className="section-label">What We Do</span>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#131313] dark:text-white leading-tight">
-              We Design <em className="italic dark:text-[#81fa00] text-[#81fa00]/50">Software .</em>
-              <br />
-              That speaks to <em className="italic font-serif">Audiences</em>
-            </h2>
-          </div>
 
-          <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.slice(0, 3).map((service, i) => (
-              <ServiceCard key={service.id} service={service} index={i} />
-            ))}
-          </div>
-
-          <div className="grid md:hidden grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6">
-            {services.slice(0, 2).map((service, i) => (
-              <ServiceCard key={service.id} service={service} index={i} />
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <Link href="/services" className="btn-outline">
-              See All Services <ArrowRight size={15} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ─── WHY CHOOSE US ─── */}
       <section className="py-24 bg-gray-50 dark:bg-[#0F2318]/50">
@@ -226,8 +192,10 @@ export default function HomePage() {
         </div>
       </section>
 
+         
+
       {/* ─── PROJECTS ─── */}
-      <section className="py-24 bg-[#f2f2f2] dark:bg-[#0c2501]">
+      {/* <section className="py-24 bg-[#f2f2f2] dark:bg-[#0c2501]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-8 md:mb-14">
             <div>
@@ -241,20 +209,10 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="md:grid hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.slice(0, 3).map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
-            ))}
-          </div>
-
-          <div className="grid md:hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {projects.slice(0, 2).map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
-            ))}
-          </div>
 
         </div>
-      </section>
+      </section> */}
+      <ProductsSection/>
 
       {/* ─── TESTIMONIALS ─── */}
       <section className="py-24 bg-[#0c2501]">
