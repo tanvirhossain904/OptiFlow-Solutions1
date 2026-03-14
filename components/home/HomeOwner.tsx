@@ -207,7 +207,7 @@ export default function HomeOwner() {
                 className="absolute bottom-0 left-0 right-0 px-6 py-6"
                 style={{ background: "linear-gradient(to top, rgba(7,20,1,0.95) 0%, transparent 100%)" }}
               >
-                <p className="text-white font-bold text-xl">Owner Name</p>
+                <p className="text-white font-bold text-xl">Mehedi H. Jony</p>
                 <p className="text-sm mt-0.5 text-gray-400">
                   Founder & CEO · EasySoft 
                 </p>
