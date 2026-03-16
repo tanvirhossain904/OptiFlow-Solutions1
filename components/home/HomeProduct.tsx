@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard, BookOpen, ShoppingCart, Receipt,
   Package, Utensils, Users, Building2, BarChart2,
-  GraduationCap, ArrowRight, X, Check,
+  GraduationCap, ArrowRight, X, Check, Stethoscope,
 } from 'lucide-react'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -19,101 +19,130 @@ interface Product {
   tags: string[]
   results: string[]
   icon: React.ElementType
-  // accent is now one of three tints from the same green family
   accent: '#81fa00' | '#4ade80' | '#a3e635'
 }
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
+// ─── Data — synced exactly with ProductsDropdown ──────────────────────────────
 const PRODUCTS: Product[] = [
   {
-    name: 'EasyManager',   path: '/easy',           soon: true,
-    cat: 'Management',
-    desc: 'All-in-one business manager for teams and operations.',
-    long: 'EasyManager is your central hub for managing business operations, team workflows, and project tracking in one unified platform.',
-    tags: ['Operations', 'Teams', 'Projects'],
-    results: ['Centralised dashboard', 'Role-based access', 'Multi-branch support'],
-    icon: LayoutDashboard,  accent: '#81fa00',
-  },
-  {
-    name: 'EasyLedger',    path: '/easylead',        soon: false,
-    cat: 'Finance',
-    desc: 'Modern ledger and bookkeeping for growing businesses.',
-    long: 'EasyLedger simplifies accounting with double-entry bookkeeping, automated reconciliation, and financial reporting built for SMEs.',
-    tags: ['Accounting', 'Reports', 'Reconciliation'],
-    results: ['Automated reconciliation', 'Real-time P&L', 'Multi-currency'],
-    icon: BookOpen,          accent: '#4ade80',
-  },
-  {
-    name: 'EasyPOS',       path: '/easypos',         soon: false,
-    cat: 'Retail',
-    desc: 'Fast, reliable point-of-sale for retail and service businesses.',
-    long: 'EasyPOS delivers a smooth checkout experience with inventory sync, receipt printing, and end-of-day reporting — online and offline.',
-    tags: ['POS', 'Inventory', 'Receipts'],
-    results: ['Offline mode', 'Barcode scanning', 'Daily reports'],
-    icon: ShoppingCart,      accent: '#a3e635',
-  },
-  {
-    name: 'EasyAccounts',  path: '/easyaccounts',    soon: true,
-    cat: 'Finance',
-    desc: 'Full accounts payable and receivable management.',
-    long: 'EasyAccounts tracks invoices, payments, and vendor accounts with automated reminders and aging reports.',
-    tags: ['Invoicing', 'Payments', 'Vendors'],
-    results: ['Automated reminders', 'Aging reports', 'Tax-ready exports'],
-    icon: Receipt,           accent: '#81fa00',
-  },
-  {
-    name: 'EasyInventory', path: '/easyinventory',   soon: true,
-    cat: 'Inventory',
-    desc: 'Real-time stock control across warehouses and branches.',
-    long: 'EasyInventory gives you live stock levels, low-stock alerts, purchase orders, and supplier management in one place.',
-    tags: ['Stock', 'Warehousing', 'Suppliers'],
-    results: ['Low-stock alerts', 'PO automation', 'Multi-location'],
-    icon: Package,           accent: '#4ade80',
-  },
-  {
-    name: 'EasyRestaurant', path: '/easyresturant',  soon: false,
-    cat: 'F&B',
-    desc: 'Table, kitchen, and billing management for restaurants.',
-    long: 'EasyRestaurant connects front-of-house, kitchen display, and billing so orders flow seamlessly from table to plate to receipt.',
-    tags: ['KDS', 'Table management', 'Billing'],
-    results: ['KDS integration', 'Split billing', 'Reservation module'],
-    icon: Utensils,          accent: '#a3e635',
-  },
-  {
-    name: 'EasyHRM',       path: '/easyhrm',         soon: true,
-    cat: 'HR',
-    desc: 'Payroll, attendance, and employee records simplified.',
-    long: 'EasyHRM handles end-to-end HR — from onboarding and leave management to payroll processing and compliance reporting.',
-    tags: ['Payroll', 'Attendance', 'Compliance'],
-    results: ['One-click payroll', 'Leave calendar', 'Compliance reports'],
-    icon: Users,             accent: '#81fa00',
-  },
-  {
-    name: 'EasyHMS',       path: '/easyhms',         soon: true,
-    cat: 'Hospitality',
-    desc: 'Hotel and property management from check-in to checkout.',
-    long: 'EasyHMS manages reservations, room assignments, housekeeping schedules, and billing across properties.',
-    tags: ['Reservations', 'Rooms', 'Billing'],
-    results: ['Channel manager', 'Housekeeping board', 'Revenue analytics'],
-    icon: Building2,         accent: '#4ade80',
-  },
-  {
-    name: 'EasyAnaly AI',  path: '/easyanaly',       soon: true,
+    name: 'EasyAnaly AI',
+    path: 'https://p1.easy-soft.co/',  // ✅ external live URL
+    soon: false,
     cat: 'Analytics',
     desc: 'AI-powered insights and dashboards for your business data.',
     long: 'EasyAnaly AI transforms raw data into actionable insights with natural-language queries, auto-charts, and anomaly detection.',
     tags: ['AI', 'Dashboards', 'Reports'],
     results: ['NL query interface', 'Anomaly alerts', 'Export to PDF'],
-    icon: BarChart2,         accent: '#a3e635',
+    icon: BarChart2,
+    accent: '#a3e635',
   },
   {
-    name: 'EasyLMS',       path: '/easylms',         soon: true,
+    name: 'EasyClinic',
+    path: 'https://p2.easy-soft.co/',  // ✅ new product added
+    soon: false,
+    cat: 'Healthcare',
+    desc: 'Complete clinic and patient management for modern practices.',
+    long: 'EasyClinic streamlines appointments, patient records, billing, and prescriptions in one place — built for clinics of all sizes.',
+    tags: ['Appointments', 'Patients', 'Billing'],
+    results: ['Patient records', 'Appointment scheduling', 'Invoice generation'],
+    icon: Stethoscope,
+    accent: '#4ade80',
+  },
+  {
+    name: 'EasyManager',
+    path: 'https://p3.easy-soft.co/',  // ✅ external live URL
+    soon: false,
+    cat: 'Management',
+    desc: 'All-in-one business manager for teams and operations.',
+    long: 'EasyManager is your central hub for managing business operations, team workflows, and project tracking in one unified platform.',
+    tags: ['Operations', 'Teams', 'Projects'],
+    results: ['Centralised dashboard', 'Role-based access', 'Multi-branch support'],
+    icon: LayoutDashboard,
+    accent: '#81fa00',
+  },
+  {
+    name: 'EasyPOS',
+    path: 'https://p4.easy-soft.co/',  // ✅ external live URL
+    soon: false,
+    cat: 'Retail',
+    desc: 'Fast, reliable point-of-sale for retail and service businesses.',
+    long: 'EasyPOS delivers a smooth checkout experience with inventory sync, receipt printing, and end-of-day reporting — online and offline.',
+    tags: ['POS', 'Inventory', 'Receipts'],
+    results: ['Offline mode', 'Barcode scanning', 'Daily reports'],
+    icon: ShoppingCart,
+    accent: '#a3e635',
+  },
+  {
+    name: 'EasyHRM',
+    path: 'https://p5.easy-soft.co/',  // ✅ external live URL
+    soon: false,
+    cat: 'HR',
+    desc: 'Payroll, attendance, and employee records simplified.',
+    long: 'EasyHRM handles end-to-end HR — from onboarding and leave management to payroll processing and compliance reporting.',
+    tags: ['Payroll', 'Attendance', 'Compliance'],
+    results: ['One-click payroll', 'Leave calendar', 'Compliance reports'],
+    icon: Users,
+    accent: '#81fa00',
+  },
+  {
+    name: 'EasyLedger',
+    path: '/easylead',                 // ✅ internal coming soon
+    soon: true,
+    cat: 'Finance',
+    desc: 'Modern ledger and bookkeeping for growing businesses.',
+    long: 'EasyLedger simplifies accounting with double-entry bookkeeping, automated reconciliation, and financial reporting built for SMEs.',
+    tags: ['Accounting', 'Reports', 'Reconciliation'],
+    results: ['Automated reconciliation', 'Real-time P&L', 'Multi-currency'],
+    icon: BookOpen,
+    accent: '#4ade80',
+  },
+  {
+    name: 'EasyAccounts',
+    path: '/easyaccounts',             // ✅ internal coming soon
+    soon: true,
+    cat: 'Finance',
+    desc: 'Full accounts payable and receivable management.',
+    long: 'EasyAccounts tracks invoices, payments, and vendor accounts with automated reminders and aging reports.',
+    tags: ['Invoicing', 'Payments', 'Vendors'],
+    results: ['Automated reminders', 'Aging reports', 'Tax-ready exports'],
+    icon: Receipt,
+    accent: '#81fa00',
+  },
+  {
+    name: 'EasyInventory',
+    path: '/easyinventory',            // ✅ internal coming soon
+    soon: true,
+    cat: 'Inventory',
+    desc: 'Real-time stock control across warehouses and branches.',
+    long: 'EasyInventory gives you live stock levels, low-stock alerts, purchase orders, and supplier management in one place.',
+    tags: ['Stock', 'Warehousing', 'Suppliers'],
+    results: ['Low-stock alerts', 'PO automation', 'Multi-location'],
+    icon: Package,
+    accent: '#4ade80',
+  },
+  {
+    name: 'EasyResturant',             // ✅ matches exact spelling in ProductsDropdown
+    path: '/easyresturant',
+    soon: true,
+    cat: 'F&B',
+    desc: 'Table, kitchen, and billing management for restaurants.',
+    long: 'EasyRestaurant connects front-of-house, kitchen display, and billing so orders flow seamlessly from table to plate to receipt.',
+    tags: ['KDS', 'Table management', 'Billing'],
+    results: ['KDS integration', 'Split billing', 'Reservation module'],
+    icon: Utensils,
+    accent: '#a3e635',
+  },
+  {
+    name: 'EasyLMS',
+    path: '/easylms',                  // ✅ internal coming soon
+    soon: true,
     cat: 'EdTech',
     desc: 'Learning management for employee training and development.',
     long: 'EasyLMS lets you build courses, track completion, and issue certificates — keeping your team skills sharp and documented.',
     tags: ['Courses', 'Certificates', 'Tracking'],
     results: ['SCORM support', 'Completion tracking', 'Auto-certificates'],
-    icon: GraduationCap,    accent: '#81fa00',
+    icon: GraduationCap,
+    accent: '#81fa00',
   },
 ]
 
@@ -136,11 +165,19 @@ export default function ProductsSection() {
     return true
   })
 
+  // ✅ Navigate correctly — external URLs open in new tab, internal use router
+  const handleExplore = (product: Product) => {
+    if (product.path.startsWith('http')) {
+      window.open(product.path, '_blank', 'noopener noreferrer')
+    } else {
+      window.location.href = product.path
+    }
+  }
+
   return (
-    // ── same base bg as testimonial section ──
     <section className="py-20 bg-[#0c2501] min-h-screen">
 
-      {/* Dot grid — identical opacity/color to testimonial section feel */}
+      {/* Dot grid */}
       <div
         className="fixed inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -174,7 +211,7 @@ export default function ProductsSection() {
             </motion.p>
           </div>
 
-          {/* ── Filters — styled like the testimonial section-label ── */}
+          {/* Filters */}
           <motion.div {...fadeUp(0.15)} className="flex items-center gap-2 flex-wrap">
             {(['all', 'live', 'soon'] as Filter[]).map(f => (
               <button
@@ -213,7 +250,6 @@ export default function ProductsSection() {
                   transition={{ duration: 0.4, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                   whileHover={{ y: -4 }}
                   onClick={() => setSelected(product)}
-                  // ── card bg matches testimonial card: bg-[#0F2318] ──
                   className="group relative bg-[#0F2318] rounded-2xl border border-[#81fa00]/10 hover:border-[#81fa00]/30 cursor-pointer transition-all duration-300 overflow-hidden flex flex-col"
                 >
                   {/* Top accent line */}
@@ -240,7 +276,6 @@ export default function ProductsSection() {
                       <Icon size={18} strokeWidth={1.5} style={{ color: product.accent }} />
                     </div>
 
-                    {/* Soon / Live badge — unified green palette */}
                     {product.soon ? (
                       <span className="px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-widest bg-[#81fa00]/8 text-[#81fa00]/60 border border-[#81fa00]/15">
                         Soon
@@ -304,11 +339,11 @@ export default function ProductsSection() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.94, y: 16 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-              // ── modal bg matches testimonial card bg ──
               className="relative w-full max-w-md rounded-3xl border border-[#81fa00]/15 overflow-hidden bg-[#0F2318]"
             >
-              {/* Top glow — always lime, no per-product color */}
-              <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none"
+              {/* Top glow */}
+              <div
+                className="absolute top-0 left-0 right-0 h-40 pointer-events-none"
                 style={{ background: 'radial-gradient(ellipse at 50% -20%, rgba(129,250,0,0.12), transparent 70%)' }}
               />
 
@@ -385,18 +420,21 @@ export default function ProductsSection() {
                 <div className="flex gap-3 pt-1">
                   {selected.soon ? (
                     <button className="flex-1 px-5 py-3 rounded-full text-sm font-bold border border-[#81fa00]/15 text-gray-500 hover:text-[#81fa00] hover:border-[#81fa00]/30 transition-all duration-200">
-                      Notify Me
+                      Comming soon ...
                     </button>
                   ) : (
                     <>
-                      <button
-                        onClick={() => window.location.href = selected.path}
-                        className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-black text-black bg-[#81fa00] hover:bg-[#a3e635] transition-all duration-200"
-                        style={{ boxShadow: '0 0 24px rgba(129,250,0,0.25)' }}
-                      >
-                        Explore {selected.name}
-                        <ArrowRight size={14} />
-                      </button>
+                      {/* ✅ Only render the Explore button if path exists */}
+                      {selected.path && (
+                        <button
+                          onClick={() => handleExplore(selected)}
+                          className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-black text-black bg-[#81fa00] hover:bg-[#a3e635] transition-all duration-200"
+                          style={{ boxShadow: '0 0 24px rgba(129,250,0,0.25)' }}
+                        >
+                          Visit {selected.name}
+                          <ArrowRight size={14} />
+                        </button>
+                      )}
                       <button className="px-5 py-3 rounded-full text-sm font-bold border border-[#81fa00]/15 text-gray-500 hover:text-[#81fa00] hover:border-[#81fa00]/30 transition-all duration-200">
                         Docs
                       </button>
