@@ -10,15 +10,15 @@ import logo from '@/public/logos/white_logo.png'
 
 // Products Dropdown Data
 const ProductsDropdown = [
-  { name: "EasyManager", path: "/easy", comingSoon: true },
-  { name: "EasyLedger", path: "/easylead", comingSoon: false },
-  { name: "EasyPOS", path: "/easylpos", comingSoon: false },
+  { name: "EasyAnaly AI", path: "https://p1.easy-soft.co/", comingSoon: false },
+  { name: "EasyClinic", path: "https://p2.easy-soft.co/", comingSoon: false },
+  { name: "EasyManager", path: "https://p3.easy-soft.co/", comingSoon: false },
+  { name: "EasyPOS", path: "https://p4.easy-soft.co/", comingSoon: false },
+  { name: "EasyHRM", path: "https://p5.easy-soft.co/", comingSoon: false },
+  { name: "EasyLedger", path: "/easylead", comingSoon: true },
   { name: "EasyAccounts", path: "/easyaccounts", comingSoon: true },
   { name: "EasyInventory", path: "/easyinventory", comingSoon: true },
-  { name: "EasyResturant", path: "/easyresturant", comingSoon: false },
-  { name: "EasyHRM", path: "/easyhrm", comingSoon: true },
-  { name: "EasyHMS", path: "/easyhms", comingSoon: true },
-  { name: "EasyAnaly AI", path: "/easyanaly", comingSoon: true },
+  { name: "EasyResturant", path: "/easyresturant", comingSoon: true },
   { name: "EasyLMS", path: "/easylms", comingSoon: true },
 ]
 
