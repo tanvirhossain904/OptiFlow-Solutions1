@@ -10,7 +10,7 @@ import logo from '@/public/logos/white_logo.png'
 
 // Products Dropdown Data
 const ProductsDropdown = [
-  { name: "EasyAnaly AI", path: "https://p1.easy-soft.co/", comingSoon: false },
+  { name: "EasyAnalyze AI", path: "https://p1.easy-soft.co/", comingSoon: false },
   { name: "EasyClinic", path: "https://p2.easy-soft.co/", comingSoon: false },
   { name: "EasyManager", path: "https://p3.easy-soft.co/", comingSoon: false },
   { name: "EasyPOS", path: "https://p4.easy-soft.co/", comingSoon: false },
