@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://easy-soft-drab.vercel.app/api/sitemap

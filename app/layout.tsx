@@ -7,13 +7,18 @@ export const metadata: Metadata = {
   title: 'EasySoft – Smart Software Solutions',
   description:
     'We build scalable, secure, and innovative tech solutions designed to accelerate your business growth and simplify complex challenges.',
-  keywords: 'software development, IT consulting, web development, mobile apps, cloud solutions',
+  keywords:
+    'software development, IT consulting, web development, mobile apps, cloud solutions',
+
+  verification: {
+    google: 'OtGHL1iMlD2n4QEdW1zZ5QVmj8TrKnOV4bLXQ1cbAvE',
+  },
+
   icons: {
-    icon: '/logos/icon.png', // your tab favicon
-    apple: '/logos/icon.png', // optional Apple touch icon
+    icon: '/logos/icon.png',
+    apple: '/logos/icon.png',
   },
 }
-
 export default function RootLayout({
   children,
 }: {
