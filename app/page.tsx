@@ -17,6 +17,7 @@ import HomeDeployTeam from '@/components/home/HomeDeployTeam';
 import HomeHero2 from '@/components/home/HomeHero2';
 import HomeBrand from '@/components/home/Homebrand';
 import ProductsSection from '@/components/home/HomeProduct';
+import HomeTestimonialSection from '@/components/home/HomeTestimonialSection';
 
 
 export default function HomePage() {
@@ -134,52 +135,7 @@ export default function HomePage() {
       </section> */}
       <ProductsSection/>
 
-      {/* ─── TESTIMONIALS ─── */}
-      <section className="py-24 bg-[#0c2501]">
-        <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 md:mb-14">
-            <span className="section-label">Client Stories</span>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
-              <em className="italic font-serif">Hear</em> What They're
-              <br />
-              Saying <em className="italic font-serif text-[#81fa00]">About Us</em>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="bg-[#0F2318] rounded-2xl overflow-hidden border border-[#81fA00]/10 hover:border-[#81fA00]/30 transition-all duration-300"
-              >
-                <div className={`md:h-40 h-32 ${t.color} relative`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="md:w-16 w-12 h-12 md:h-16 rounded-full bg-black/20 border-2 border-white/30" />
-                  </div>
-                </div>
-                <div className="md:p-5 p-3">
-                  <div className="flex gap-0.5 mb-2 md:mb-3">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={12} className="text-[#81fa00] fill-[#81fa00]" />
-                    ))}
-                  </div>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-2 md:mb-4 line-clamp-3">{t.text}</p>
-                  <div>
-                    <span className="text-xs text-gray-600 block mb-0.5">Logo</span>
-                    <p className="font-bold text-white text-xs md:text-sm">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HomeTestimonialSection/>
 
       {/* ─── CTA / CONTACT ─── */}
       <section className="py-24 bg-[#0F2318]">
