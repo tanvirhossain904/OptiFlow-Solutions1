@@ -14,8 +14,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Fax',
-    value: '+1 (813) 436-5206',
-    href: 'tel:+18134365206',
+    value: '+1 (727) 458 9360',
+    href: 'tel:+17274589360',
   },
   {
     icon: MapPin,

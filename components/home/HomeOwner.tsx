@@ -31,9 +31,9 @@ const leaders = [
       </>
     ),
     stats: [
-      { value: "8+", label: "Years",    sub: "of Industry Leadership" },
-      { value: "50+", label: "Partners", sub: "Strategic Alliances Built" },
-      { value: "3x",  label: "Growth",   sub: "Company Scale Achieved" },
+      { value: "8+", label: "Years",    sub: "Leadership" },
+      { value: "50+", label: "Partners", sub: "Alliances Built" },
+      { value: "3x",  label: "Growth",   sub: "Company Scale" },
     ],
   },
   {
@@ -58,9 +58,9 @@ const leaders = [
       </>
     ),
     stats: [
-      { value: "5+",   label: "Years",        sub: "of Experience" },
-      { value: "120+", label: "Projects",     sub: "Successfully Delivered" },
-      { value: "98%",  label: "Satisfaction", sub: "Client Happiness Rate" },
+      { value: "5+",   label: "Years",        sub: "Experience" },
+      { value: "120+", label: "Projects",     sub: "Delivered" },
+      { value: "98%",  label: "Satisfaction", sub: "Client Happiness " },
     ],
   },
 ];
@@ -385,7 +385,7 @@ export default function HomeOwner() {
 
             <div
               ref={statsRef}
-              className="flex flex-wrap gap-4 md:gap-10 pt-4 border-t will-change-transform border-[#81fa00]/10"
+              className="flex flex-wrap gap-8 md:gap-8 pt-4 border-t will-change-transform border-[#81fa00]/10"
             >
               {leader.stats.map((stat, i) => (
                 <div
@@ -393,7 +393,7 @@ export default function HomeOwner() {
                   ref={(el) => { if (el) statItemsRef.current[i] = el; }}
                   className="will-change-transform"
                 >
-                  <p className="text-2xl md:text-4xl font-extrabold tabular-nums text-[#81fa00]">
+                  <p className="text-xl md:text-4xl font-extrabold tabular-nums text-[#81fa00]">
                     {stat.value}
                   </p>
                   <p className="text-xs font-bold uppercase tracking-wider mt-1.5 text-[#131313] dark:text-white">

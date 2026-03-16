@@ -19,11 +19,11 @@ const footerLinks = {
     { label: 'Contact',  href: '/contact' },
   ],
   Services: [
-    { label: 'Custom Software Development', href: '/services/software-development' },
-    { label: 'Dedicated Development Team',  href: '/services/dedicated-team' },
-    { label: 'Business Automation',         href: '/services/business-automation' },
-    { label: 'Cloud & DevOps',              href: '/services/cloud-devops' },
-    { label: 'UI/UX Design',               href: '/services/design' },
+    { label: 'Custom Software Development', href: '/services' },
+    { label: 'Dedicated Development Team',  href: '/services' },
+    { label: 'Business Automation',         href: '/services' },
+    { label: 'Cloud & DevOps',              href: '/services' },
+    { label: 'UI/UX Design',               href: '/services' },
   ],
   Legal: [
     { label: 'Terms & Conditions', href: '#' },
