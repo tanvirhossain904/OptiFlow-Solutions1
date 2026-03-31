@@ -286,7 +286,7 @@ export default function SoftwareDevelopment() {
                   <div className="w-3 h-3 rounded-full bg-red-500/50" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
                   <div className="w-3 h-3 rounded-full bg-[#81fa00]/60" />
-                  <span className="ml-3 text-xs text-gray-600 font-mono">easysoft.config.ts</span>
+                  <span className="ml-3 text-xs text-gray-600 font-mono">optiflow.config.ts</span>
                 </div>
                 <div className="p-6 font-mono text-xs leading-7">
                   <div><span className="text-[#81fa00]/60">const</span> <span className="text-[#81fa00]">project</span> <span className="text-white/30">= {'{'}</span></div>

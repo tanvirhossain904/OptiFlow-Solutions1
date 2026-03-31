@@ -45,7 +45,7 @@ const offices = [
     country: 'United States',
     city: 'St. Petersburg, FL',
     contacts: [
-      { icon: Mail,   label: 'Email',   value: 'hello@easysoft.dev',                               href: 'mailto:hello@easysoft.dev' },
+      { icon: Mail,   label: 'Email',   value: 'hello@optiflow.dev',                               href: 'mailto:hello@optiflow.dev' },
       { icon: Phone,  label: 'Fax',     value: '+1 (727) 458 9360',                                href: 'tel:+17274589360' },
       { icon: MapPin, label: 'Address', value: '7901 4th St N, Ste 300\nSt. Petersburg, FL 33702',  href: 'https://maps.google.com/?q=7901+4th+St+N+Ste+300+St+Petersburg+FL+33702' },
     ],
@@ -131,7 +131,7 @@ export default function Footer() {
             {/* Brand column */}
             <div className="lg:col-span-2">
               <Link href="/" className="inline-block mb-5">
-                <Image src={logo} alt="Easysoft LLC" width={140} height={46} priority />
+                <Image src={logo} alt="OptiFlow Solutions" width={140} height={46} priority />
               </Link>
 
               <p className="text-sm text-gray-500 leading-relaxed mb-6 max-w-[260px]">
@@ -147,7 +147,7 @@ export default function Footer() {
                     Registered Entity
                   </p>
                   <p className="text-xs text-gray-500 font-semibold leading-tight mt-0.5">
-                    Easysoft LLC · Florida, USA
+                    OptiFlow Solutions · Florida, USA
                   </p>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function Footer() {
                 </h4>
               </div>
               <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                Product updates, launch announcements, and insights from Easysoft.
+                Product updates, launch announcements, and insights from OptiFlow.
               </p>
               <div className="flex flex-col gap-2">
                 <input
@@ -297,7 +297,7 @@ export default function Footer() {
           <div className="border-t border-[#81fa00]/6 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
               <p className="text-[11px] text-gray-700">
-                © {new Date().getFullYear()} Easysoft LLC · All rights reserved
+                © {new Date().getFullYear()} OptiFlow Solutions · All rights reserved
               </p>
               <span className="w-1 h-1 rounded-full bg-gray-700 hidden sm:block" />
               <p className="text-[11px] text-gray-700">St. Petersburg, FL, USA</p>

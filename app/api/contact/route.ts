@@ -204,7 +204,7 @@ export async function POST(req: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'Easy Soft Contact Form <onboarding@resend.dev>', 
+      from: 'OptiFlow Solutions Contact Form <onboarding@resend.dev>', 
       to: ['nazmulhasan00068@gmail.com'],
       replyTo: email,
       subject: `New Inquiry from ${firstName}${companyName ? ` · ${companyName}` : ''}`,

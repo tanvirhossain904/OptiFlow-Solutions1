@@ -42,7 +42,7 @@ export default function Sidebar() {
       <div className="flex items-center gap-3 px-4 py-5 border-b border-[#81fA00]/10">
         {!collapsed && (
           <span className="text-base font-bold text-white whitespace-nowrap">
-            easysoft<span className="text-[#81fa00]   text-2xl md:text-3xl  font-bold">.</span>
+            OptiFlow<span className="text-[#81fa00]   text-2xl md:text-3xl  font-bold">.</span>
           </span>
         )}
       </div>

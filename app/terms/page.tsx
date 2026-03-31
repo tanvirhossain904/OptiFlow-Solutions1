@@ -3,12 +3,12 @@ import LegalLayout from '@/components/legal/LegalLayout'
 const sections = [
   {
     title: 'Acceptance of Terms',
-    content: 'By accessing or using any Easysoft LLC product or service ("Service"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our Services. These terms apply to all users, including visitors, customers, and contributors.',
+    content: 'By accessing or using any OptiFlow Solutions product or service ("Service"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our Services. These terms apply to all users, including visitors, customers, and contributors.',
   },
   {
     title: 'Description of Services',
     content: [
-      'Easysoft LLC provides cloud-based SaaS products including but not limited to EasyPOS, EasyHRM, EasyManager, EasyLedger, EasyClinic, and EasyAnaly AI.',
+      'OptiFlow Solutions provides cloud-based SaaS products including but not limited to EasyPOS, EasyHRM, EasyManager, EasyLedger, EasyClinic, and EasyAnaly AI.',
       'Services are provided on a subscription basis and may be updated, modified, or discontinued at any time with reasonable notice.',
       'Access to certain features may require a paid subscription plan.',
       'We reserve the right to introduce new services or modify existing ones.',
@@ -46,7 +46,7 @@ const sections = [
   },
   {
     title: 'Intellectual Property',
-    content: 'All content, features, and functionality of the Services — including software, text, graphics, logos, and designs — are the exclusive property of Easysoft LLC and are protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the Services solely for your internal business purposes.',
+    content: 'All content, features, and functionality of the Services — including software, text, graphics, logos, and designs — are the exclusive property of OptiFlow Solutions and are protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the Services solely for your internal business purposes.',
   },
   {
     title: 'Data and Privacy',
@@ -54,7 +54,7 @@ const sections = [
   },
   {
     title: 'Limitation of Liability',
-    content: 'To the maximum extent permitted by law, Easysoft LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Services. Our total liability for any claim shall not exceed the amount paid by you in the 12 months preceding the claim.',
+    content: 'To the maximum extent permitted by law, OptiFlow Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Services. Our total liability for any claim shall not exceed the amount paid by you in the 12 months preceding the claim.',
   },
   {
     title: 'Disclaimer of Warranties',
@@ -74,16 +74,16 @@ const sections = [
   },
   {
     title: 'Contact',
-    content: 'For questions regarding these Terms, please contact us at hello@easysoft.dev or Easysoft LLC, 7901 4th St N, Ste 300, St. Petersburg, FL 33702, USA.',
+    content: 'For questions regarding these Terms, please contact us at hello@optiflow.dev or OptiFlow Solutions, 7901 4th St N, Ste 300, St. Petersburg, FL 33702, USA.',
   },
 ]
 
 export default function TermsPage() {
   return (
     <LegalLayout
-      badge="Legal · Easysoft LLC"
+      badge="Legal · OptiFlow Solutions"
       title="Terms & Conditions"
-      subtitle="Please read these terms carefully before using any Easysoft product or service. These terms govern your use of our platform and constitute a legally binding agreement."
+      subtitle="Please read these terms carefully before using any OptiFlow Solutions product or service. These terms govern your use of our platform and constitute a legally binding agreement."
       effectiveDate="January 1, 2025"
       sections={sections}
     />

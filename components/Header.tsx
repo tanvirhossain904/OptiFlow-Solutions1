@@ -106,7 +106,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2 group">
             <Image
               src={logo}
-              alt="EasySoft Logo"
+              alt="OptiFlow Solutions Logo"
               width={150}
               height={50}
               priority

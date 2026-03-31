@@ -3,7 +3,7 @@ import LegalLayout from '@/components/legal/LegalLayout'
 const sections = [
   {
     title: 'Overview',
-    content: 'Easysoft LLC strives to deliver exceptional SaaS products and services. We understand that circumstances change, and this Refund Policy outlines when and how refunds may be issued. By subscribing to any Easysoft service, you agree to this policy.',
+    content: 'OptiFlow Solutions strives to deliver exceptional SaaS products and services. We understand that circumstances change, and this Refund Policy outlines when and how refunds may be issued. By subscribing to any OptiFlow Solutions service, you agree to this policy.',
   },
   {
     title: '14-Day Money-Back Guarantee',
@@ -11,7 +11,7 @@ const sections = [
       'All new subscriptions are eligible for a full refund within 14 days of the initial purchase date.',
       'This applies to first-time subscribers on any paid plan.',
       'The guarantee does not apply to renewals, upgrades, or add-on purchases.',
-      'To request a refund under this guarantee, contact hello@easysoft.dev within 14 days of your purchase.',
+      'To request a refund under this guarantee, contact hello@optiflow.dev within 14 days of your purchase.',
       'Refunds are processed within 5–10 business days to your original payment method.',
     ],
   },

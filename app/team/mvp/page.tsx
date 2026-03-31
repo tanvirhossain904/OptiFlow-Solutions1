@@ -132,7 +132,7 @@ export default function DedicatedTeam() {
         <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-3">
           <div className="w-px h-16 bg-[#81fa00]/15" />
           <p className="text-[9px] font-bold uppercase tracking-[0.35em] text-[#81fa00]/30 [writing-mode:vertical-rl] rotate-180">
-            EasySoft Solutions
+            OptiFlow Solutions
           </p>
           <div className="w-px h-16 bg-[#81fa00]/15" />
         </div>
